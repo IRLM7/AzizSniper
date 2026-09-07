@@ -22,9 +22,9 @@ const homeImages = [
   { src: 'https://images.unsplash.com/photo-1567016432779-094069958ea5?q=80&w=1200&auto=format&fit=crop', title: 'Form & Function', desc: 'Product storytelling with cinematic depth.', cat: 'products' },
   { src: 'https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?q=80&w=1200&auto=format&fit=crop', title: 'Clean Lines', desc: 'Minimalism meets craftsmanship.', cat: 'products' },
   { src: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?q=80&w=1200&auto=format&fit=crop', title: 'Object Study', desc: 'Every detail tells a story.', cat: 'products' },
-  { src: 'https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?q=80&w=1200&auto=format&fit=crop', title: 'Built to Move', desc: 'Automotive elegance in motion.', cat: 'cars' },
-  { src: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop', title: 'Metal & Light', desc: 'Sculpted shadows on polished steel.', cat: 'cars' },
-  { src: 'https://images.unsplash.com/photo-1504215680853-026ed2a45def?q=80&w=1200&auto=format&fit=crop', title: 'Road Story', desc: 'Journeys worth pausing.', cat: 'cars' },
+  { src: 'https://github.com/IRLM7/AzizSniper/blob/main/images/mot1.jpg?raw=true', title: 'Built to Move', desc: 'Automotive elegance in motion.', cat: 'cars' },
+  { src: 'https://github.com/IRLM7/AzizSniper/blob/main/images/mot2.jpg?raw=true', title: 'Metal & Light', desc: 'Sculpted shadows on polished steel.', cat: 'cars' },
+  { src: 'https://github.com/IRLM7/AzizSniper/blob/main/images/mot3.jpg?raw=true', title: 'Road Story', desc: 'Journeys worth pausing.', cat: 'cars' },
 ];
 
 const homeGrid = document.getElementById('masonryGrid');
