@@ -7,7 +7,7 @@
 #heroWrap { height: 190vh; }
 #heroSticky {
   position: sticky; top: 0; height: 100vh; width: 100%; overflow: hidden;
-  background-image: url('https://media.discordapp.net/attachments/1328417447224541226/1546283791847395398/DSC_6239-Edit.jpg?ex=6a9f3880&is=6a9de700&hm=5d23d3484869eb54d4be3243dfe65438ad1a2b9ecf46b49ffd2a6ab4fd0d871d&=&format=webp&width=1280&height=854');
+  background-image: url('https://github.com/IRLM7/AzizSniper/blob/main/images/mot2.jpg?raw=true');
   background-size: cover; background-position: center;
   will-change: transform, filter;
 }
