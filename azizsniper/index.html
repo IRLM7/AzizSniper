@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="Azizsniper Studio — sports, products, and automotive photography based in Abu Dhabi, UAE.">
+<title>Azizsniper — Photography Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { serif: ['Playfair Display', 'serif'], sans: ['Inter', 'sans-serif'] },
+        colors: {
+          ink: 'var(--color-bg)',
+          bone: 'var(--color-text)',
+          accent: 'var(--color-accent)',
+          accent2: 'var(--color-accent2)',
+          panel: 'var(--color-panel)',
+          muted: 'var(--color-muted)',
+          gold: 'var(--color-gold)'
+        }
+      }
+    }
+  }
+</script>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="bg-ink text-bone antialiased page-home">
+<nav id="nav" class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-6">
+  <a href="index.html" class="flex items-center gap-3">
+    <img id="navLogo" src="https://media.discordapp.net/attachments/1328417447224541226/1541558393444114472/azlogo.jpg?ex=6a8f5921&is=6a8e07a1&hm=edd903a4cf044db4a510171cc415ba378486af646c0d2e2d12041df9288feb64&=&format=webp" alt="Azizsniper logo">
+    <span class="font-serif text-xl md:text-2xl tracking-widest"></span>
+  </a>
+  <div class="hidden md:flex gap-10 text-sm uppercase tracking-widest">
+    <a href="gallery.html" class="nav-link hover:text-accent2 transition">Gallery</a>
+    <a href="#about" class="nav-link hover:text-accent2 transition">About</a>
+    <a href="#services" class="nav-link hover:text-accent2 transition">Services</a>
+    <a href="#contact" class="nav-link hover:text-accent2 transition">Contact</a>
+  </div>
+  <a href="#contact" class="hidden md:inline-block nav-link text-sm uppercase tracking-widest border border-bone/40 px-4 py-2 rounded-full hover:bg-bone hover:text-ink transition">Hire Me</a>
+
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <span class="line line-1"></span>
+    <span class="line line-2"></span>
+    <span class="line line-3"></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-links">
+    <a href="gallery.html" class="mobile-menu-link">
+      <div><span class="link-label">Gallery</span><div class="link-num" style="margin-top: 0.25rem; display: block;">— Selected Works</div></div>
+      <span class="link-arrow">→</span>
+    </a>
+    <a href="#about" class="mobile-menu-link">
+      <div><span class="link-label">About</span><div class="link-num" style="margin-top: 0.25rem; display: block;">— The Story</div></div>
+      <span class="link-arrow">→</span>
+    </a>
+    <a href="#services" class="mobile-menu-link">
+      <div><span class="link-label">Services</span><div class="link-num" style="margin-top: 0.25rem; display: block;">— What I Offer</div></div>
+      <span class="link-arrow">→</span>
+    </a>
+    <a href="#contact" class="mobile-menu-link">
+      <div><span class="link-label">Contact</span><div class="link-num" style="margin-top: 0.25rem; display: block;">— Get In Touch</div></div>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div>
+    <div class="mobile-menu-hire">
+      <a href="#contact" class="mobile-menu-hire-btn">
+        Hire Me
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="mobile-menu-footer">
+      <span>© 2026</span>
+      <div class="socials"><a href="#">IG</a><a href="#">BE</a><a href="#">IN</a></div>
+    </div>
+  </div>
+</div>
+
+<section id="heroWrap" class="relative w-full">
+  <div id="heroSticky" class="flex items-end">
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="relative z-10 px-6 md:px-12 pb-20 w-full" id="heroContent">
+      <p class="uppercase tracking-[0.3em] text-xs md:text-sm text-accent mb-4 overflow-hidden" id="heroTag">Visual Storyteller</p>
+      <h1 id="heroTitle" class="font-serif text-[13vw] md:text-[8vw] leading-[0.9] font-medium">
+        <span class="block overflow-hidden"><span class="char-line inline-block">FRAME</span></span>
+        <span class="block overflow-hidden"><span class="char-line inline-block italic text-accent">BY FRAME</span></span>
+      </h1>
+      <div class="flex flex-wrap justify-between items-end mt-8 gap-6">
+        <p class="max-w-md text-bone/70 font-light" id="heroSub">Capturing candid emotion and timeless light — sports, products, and automotive work based in Abu Dhabi.</p>
+        <a href="#gallery" class="group flex items-center gap-3 uppercase text-sm tracking-widest border-b border-accent pb-1 hover:gap-5 transition-all nav-link" id="heroCta">View Work <span class="inline-block transition-transform group-hover:translate-x-2">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="pt-32 pb-28 relative z-10 bg-ink overflow-hidden">
+  <div class="gallery-hero reveal">
+    <div>
+      <div class="accent-line"></div>
+      <p class="uppercase tracking-[0.3em] text-accent text-xs mb-4">Selected Work · 2018—2026</p>
+      <h2>The <em class="italic text-accent font-light">Curated</em><br>Gallery</h2>
+    </div>
+    <div class="gallery-meta-row">
+      <div class="gallery-counter-lux">
+        <span class="big" id="counterVisible">09</span>
+        <span class="small">moments / captured</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="filters-row-mobile reveal md:flex md:justify-between md:items-center md:mb-12 md:px-6 mb-8 px-4" style="flex-wrap: wrap; gap: 1.5rem;">
+    <p class="text-sm text-bone/50 font-light max-w-md">A handpicked selection from my journey — each image a story of light, motion, and intention.</p>
+    <div class="filters-wrap" id="filters">
+      <button class="filter-btn active" data-filter="all">All Works</button>
+      <button class="filter-btn" data-filter="sports">Sports</button>
+      <button class="filter-btn" data-filter="products">Products</button>
+      <button class="filter-btn" data-filter="cars">Automotive</button>
+    </div>
+  </div>
+
+  <div class="masonry-gallery" id="masonryGrid"></div>
+
+  <div class="gallery-cta reveal">
+    <a href="gallery.html" class="pill-cta">See the full gallery <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<section id="manifestoWrap" class="relative bg-ink">
+  <div id="manifestoSticky">
+    <p class="font-serif text-center text-[8vw] md:text-6xl lg:text-7xl leading-[1.35] max-w-5xl">
+      <span class="mline">Every subject has a rhythm.</span>
+      <span class="mline">A frame is the only way to <span class="accent-word">keep</span> it.</span>
+      <span class="mline">This is why I photograph.</span>
+    </p>
+  </div>
+</section>
+
+<section id="about" class="px-6 md:px-12 py-28 grid md:grid-cols-2 gap-12 items-center relative z-10 bg-ink">
+  <div class="relative overflow-hidden rounded-md reveal img-hover-target h-[70vh]">
+    <img src="https://images.pexels.com/photos/30797307/pexels-photo-30797307.jpeg" alt="Portrait of the photographer" class="w-full h-full object-cover" id="aboutImg" style="transform: scale(1.15);">
+  </div>
+  <div class="reveal" id="aboutText">
+    <p class="uppercase tracking-widest text-accent text-xs mb-3">About Me</p>
+    <h2 class="font-serif text-4xl md:text-5xl mb-6 leading-tight">I don't just take photos, I preserve impact.</h2>
+    <p class="text-bone/70 leading-relaxed mb-6 font-light">For over eight years I've been chasing speed, detail, texture, and decisive moments across sports, products, and automotive shoots. My work is built around clean composition, controlled light, and images that make people stop and look.</p>
+    <p class="text-bone/70 leading-relaxed font-light">Based in Abu Dhabi, available worldwide. Let's build something striking together.</p>
+    <div class="grid grid-cols-3 gap-6 mt-10 border-t border-bone/10 pt-8">
+      <div><h3 class="font-serif text-3xl text-accent stat-num" data-target="8" data-suffix="+">0</h3><p class="text-xs uppercase tracking-widest text-bone/50 mt-1">Years</p></div>
+      <div><h3 class="font-serif text-3xl text-accent stat-num" data-target="240" data-suffix="">0</h3><p class="text-xs uppercase tracking-widest text-bone/50 mt-1">Projects</p></div>
+      <div><h3 class="font-serif text-3xl text-accent stat-num" data-target="30" data-suffix="+">0</h3><p class="text-xs uppercase tracking-widest text-bone/50 mt-1">Awards</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICES SECTION
+     ============================================================ -->
+<section id="services" class="px-6 md:px-12 py-28 md:py-36 relative z-10 bg-ink">
+  <!-- Decorative background glows -->
+  <div class="services-bg-decor top-1/3 -left-40 w-[500px] h-[500px]" style="background: rgba(89,203,232,0.06);"></div>
+  <div class="services-bg-decor bottom-1/4 -right-40 w-[500px] h-[500px]" style="background: rgba(0,199,199,0.05);"></div>
+
+  <div class="relative z-10 max-w-[1600px] mx-auto">
+    <!-- Section Header -->
+    <div class="grid md:grid-cols-2 gap-10 mb-16 md:mb-20 items-end">
+      <div class="reveal">
+        <div class="flex items-center gap-3 mb-5">
+          <span class="w-12 h-[1px] bg-accent"></span>
+          <p class="uppercase tracking-[0.3em] text-accent text-xs">What I Offer</p>
+        </div>
+        <h2 class="font-serif text-5xl md:text-7xl leading-[0.95] tracking-tight">
+          Services <em class="italic text-accent font-light">crafted</em><br>
+          for the <span class="italic text-accent">extraordinary.</span>
+        </h2>
+      </div>
+      <div class="reveal md:text-right">
+        <p class="text-bone/60 font-light leading-relaxed max-w-md md:ml-auto">
+          Every project is tailored to your brand's vision. From high-intensity sports coverage to cinematic product and automotive shoots — expect nothing less than exceptional.
+        </p>
+        <div class="flex items-center gap-3 mt-6 md:justify-end">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+          </span>
+          <span class="text-xs uppercase tracking-widest text-bone/60">Available for bookings</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bento Services Grid -->
+    <div class="services-grid">
+
+      <!-- 01 — Sports Photography (Large) -->
+      <article class="service-card-lux service-card-lux--lg reveal" data-mouse-track>
+        <div class="service-bg-image" style="background-image: url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=900&auto=format&fit=crop');"></div>
+        <div class="relative z-10">
+          <span class="service-num">01</span>
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg>
+          </div>
+          <span class="service-tag">Action · Motion · Impact</span>
+          <h3 class="service-title">Sports<br>Photography</h3>
+          <p class="service-desc">High-octane action coverage that freezes split-second intensity — from championship games to intimate training sessions.</p>
+        </div>
+        <div class="relative z-10">
+          <ul class="service-features">
+            <li>Live event & tournament coverage</li>
+            <li>Athlete portraits & action sequences</li>
+            <li>Team campaigns & brand partnerships</li>
+          </ul>
+          <a href="#contact" class="service-cta">
+            Book a session
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- 02 — Product Photography (Small) -->
+      <article class="service-card-lux service-card-lux--sm reveal" data-mouse-track>
+        <div class="service-bg-image" style="background-image: url('https://images.unsplash.com/photo-1567016432779-094069958ea5?q=80&w=900&auto=format&fit=crop');"></div>
+        <div class="relative z-10">
+          <span class="service-num">02</span>
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg>
+          </div>
+          <span class="service-tag">Studio · Lifestyle · Campaigns</span>
+          <h3 class="service-title">Product<br>Photography</h3>
+          <p class="service-desc">Crisp studio and lifestyle imagery engineered for launches, e-commerce, and high-impact brand storytelling.</p>
+          <ul class="service-features">
+            <li>360° product & e-commerce shots</li>
+            <li>Lifestyle & brand narrative imagery</li>
+            <li>Packaging & flat-lay compositions</li>
+          </ul>
+          <a href="#contact" class="service-cta">
+            Book a session
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- 03 — Automotive Photography (Full width) -->
+      <article class="service-card-lux service-card-lux--wide reveal" data-mouse-track style="flex-direction: row; align-items: center;">
+        <div class="service-bg-image" style="background-image: url('https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?q=80&w=1400&auto=format&fit=crop'); width: 50%; height: 120%; bottom: -10%; right: -5%;"></div>
+        <div class="grid md:grid-cols-2 gap-8 items-center relative z-10 w-full">
+          <div>
+            <span class="service-num">03</span>
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/><circle cx="6.5" cy="16.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg>
+            </div>
+            <span class="service-tag">Motion · Detail · Atmosphere</span>
+            <h3 class="service-title">Automotive<br>Photography</h3>
+            <p class="service-desc">Cinematic automotive imagery blending controlled detail, rolling shots, and atmospheric locations. From hypercars to commercial fleet campaigns.</p>
+          </div>
+          <div>
+            <ul class="service-features">
+              <li>Showroom & studio detail captures</li>
+              <li>Rolling shots & motion photography</li>
+              <li>Event coverage & car meets</li>
+              <li>Editorial & campaign productions</li>
+            </ul>
+            <a href="#contact" class="service-cta">
+              Book a session
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="service-bottom-cta reveal">
+      <div>
+        <h3>Have a custom project in mind?</h3>
+        <p>Let's discuss your vision and bring it to life with striking imagery.</p>
+      </div>
+      <a href="#contact" class="service-bottom-cta-btn">
+        Start a project
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="px-6 md:px-12 py-28 border-t border-bone/10 relative z-10 bg-ink">
+  <div class="grid md:grid-cols-2 gap-16">
+    <div class="reveal">
+      <p class="uppercase tracking-widest text-accent text-xs mb-3">Get In Touch</p>
+      <h2 class="font-serif text-4xl md:text-6xl mb-8">Let's Create <br> Something <span class="italic text-accent">Striking.</span></h2>
+      <div class="flex gap-6 mt-10 text-sm uppercase tracking-widest"><a href="#" class="hover:text-accent2 transition">Instagram</a><a href="#" class="hover:text-accent2 transition">Behance</a><a href="#" class="hover:text-accent2 transition">LinkedIn</a></div>
+      <p class="mt-10 text-bone/50 font-light">hello@azizsniper.com<br>Abu Dhabi, UAE</p>
+    </div>
+    <form id="contactForm" class="reveal flex flex-col gap-8">
+      <input type="text" placeholder="Your Name" required class="py-3 text-bone placeholder-bone/40 font-light">
+      <input type="email" placeholder="Your Email" required class="py-3 text-bone placeholder-bone/40 font-light">
+      <textarea placeholder="Tell me about your project" rows="3" required class="py-3 text-bone placeholder-bone/40 font-light resize-none"></textarea>
+      <button type="submit" class="self-start uppercase text-sm tracking-widest border border-accent text-accent px-8 py-3 rounded-full hover:bg-accent hover:text-ink transition">Send Message</button>
+    </form>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center mt-24 pt-8 border-t border-bone/10 text-xs text-bone/40 uppercase tracking-widest gap-4"><p>© 2026 Azizsniper. All Rights Reserved.</p><p>Crafted with GSAP & Lenis</p></div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg></button>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg></button>
+  <div class="lightbox-content">
+    <img class="lightbox-img" id="lightboxImg" alt="">
+    <div class="lightbox-info"><h3 id="lightboxTitle"></h3><span id="lightboxCat"></span></div>
+  </div>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

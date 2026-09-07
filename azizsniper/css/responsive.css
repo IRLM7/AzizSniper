@@ -1,0 +1,69 @@
+/* ============================================================
+   AZIZSNIPER — RESPONSIVE OVERRIDES
+   Loaded on every page. Rules that only apply to one page are
+   scoped with the body class added in that page's <body> tag
+   (body.page-home / body.page-gallery).
+   ============================================================ */
+
+/* ---------- Shared across both pages ---------- */
+@media (max-width: 768px) {
+  .hamburger { display: block; }
+
+  .lightbox-nav { width: 40px !important; height: 40px !important; }
+  .lightbox-prev { left: 0.75rem !important; }
+  .lightbox-next { right: 0.75rem !important; }
+  .lightbox-close { top: 1rem; right: 1rem; width: 40px; height: 40px; }
+  .lightbox-info h3 { font-size: 1.4rem; }
+
+  .filters-wrap { width: 100%; justify-content: center; overflow-x: auto; white-space: nowrap; padding: 0.3rem; }
+  .filter-btn { padding: 0.5rem 1rem; font-size: 0.65rem; }
+}
+
+/* ---------- Home page only ---------- */
+@media (max-width: 768px) {
+  body.page-home #heroWrap { height: 150vh; }
+  body.page-home #heroTitle { font-size: 15vw !important; }
+  body.page-home #heroContent { padding: 0 1.25rem 3rem !important; }
+  body.page-home #heroSub { font-size: 0.9rem; }
+  body.page-home #heroTag { font-size: 0.7rem !important; }
+
+  body.page-home .gallery-hero { flex-direction: column; align-items: flex-start; gap: 2rem; padding: 0 1.25rem; margin-bottom: 2rem; }
+  body.page-home .gallery-hero h2 { font-size: clamp(2.2rem, 10vw, 3.5rem) !important; line-height: 1 !important; }
+  body.page-home .gallery-hero .accent-line { width: 50px; margin-bottom: 1rem; }
+  body.page-home .gallery-hero .gallery-counter-lux .big { font-size: 2.5rem; }
+  body.page-home .gallery-hero .gallery-counter-lux .small { font-size: 0.8rem; }
+
+  body.page-home #gallery { padding-top: 5rem !important; padding-bottom: 4rem !important; }
+  body.page-home .masonry-gallery { column-count: 1 !important; padding: 0 1.25rem !important; }
+
+  body.page-home #about { grid-template-columns: 1fr; padding: 4rem 1.25rem; gap: 2rem; }
+  body.page-home #about .h-\[70vh\] { height: 60vh; }
+  body.page-home #aboutText h2 { font-size: 2rem; }
+  body.page-home #aboutText .grid { grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+  body.page-home #aboutText .stat-num { font-size: 1.8rem; }
+
+  body.page-home #manifestoWrap { height: auto !important; padding: 4rem 0; }
+  body.page-home #manifestoSticky { position: relative !important; height: auto !important; padding: 2rem 1.25rem !important; }
+  body.page-home #manifestoSticky p { font-size: 8vw !important; }
+
+  body.page-home #services { padding: 4rem 1.25rem !important; }
+  body.page-home #services h2 { font-size: 2.5rem !important; }
+  body.page-home .services-grid { grid-template-columns: 1fr !important; }
+  body.page-home .service-card-lux { grid-column: span 1 !important; min-height: auto !important; padding: 2rem !important; }
+  body.page-home .service-num { font-size: 3rem !important; }
+  body.page-home .service-title { font-size: 1.75rem !important; }
+  body.page-home .service-bottom-cta { flex-direction: column; text-align: center; padding: 2rem !important; }
+  body.page-home .service-bottom-cta > div { text-align: center; }
+
+  body.page-home #contact { padding: 4rem 1.25rem; }
+  body.page-home #contact .grid { grid-template-columns: 1fr; gap: 3rem; }
+  body.page-home #contact h2 { font-size: 2.5rem; }
+
+  body.page-home .filters-row-mobile { display: flex; flex-direction: column; gap: 1.5rem; padding: 0 1.25rem !important; }
+  body.page-home .filters-row-mobile p { font-size: 0.85rem; }
+}
+
+@media (max-width: 480px) {
+  body.page-home #heroTitle { font-size: 18vw !important; }
+  body.page-home #manifestoSticky p { font-size: 10vw !important; }
+}
